@@ -1,0 +1,557 @@
+*{
+    margin:0px;
+    scroll-behavior: smooth;
+}
+/* ================================Box1================================== */
+#box1{
+    height: 100px;
+    width: 100%;
+    background-image: url(images/nav-back.jpg);
+    background-size: 100% 100px;
+    z-index: +1;
+    position: fixed;
+}
+.black-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+#logo{
+    height: 100px;
+    width: 30%;
+}
+#logo img{
+    padding-left: 40px;
+    padding-top: 10px;
+    width: 35%;
+    height: 60%;
+}
+/* ==================== */
+.flip-card{
+    background-color: transparent;
+    width: 100%;
+    height: 125px;
+    perspective: 1000px;
+}
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+/* ========================= */
+#nav-butt{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+nav ul{
+    /* background-color: violet; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li{
+    /* background-color: magenta; */
+    margin: 40px 0px 0px 40px;
+}
+nav ul li:hover #d-down{
+    display: block;
+}
+/* drop-down  */
+#d-down{
+    display: none;
+    flex-direction: column;
+    padding-inline-start: 0px;
+    /* margin-right: -30px; */
+}
+#d-down li{
+    text-align: center;
+    margin: 10px 0px 0px 10px;
+    padding: 0px;
+    background-image: url(images/li-back.jpg);
+}
+#d-down li a{
+    color: #f2f2f2;
+}
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover, #d-down li a:active, #d-down li a:hover{
+  color:crimson;
+  letter-spacing: 3px;
+}
+/* ================================Box2================================== */
+#box2{
+    height: 185px;
+    width: 100%;
+    background-color: #0caf35;
+    background-image: url(images/mural-back.png);
+    color: black;
+    text-align: center;
+    font-family: 'Noto Sans Devanagari';
+}
+@keyframes change{
+    0%{font-family: 'Pacifico'; letter-spacing: 2px; transition: 1s;} 
+    25%{font-family: 'Josefin Sans'; transition: 1s;}
+    50%{font-family: 'Trebuchet MS'; transition: 1s;}
+    100%{font-family: 'Shantell Sans'; transition: 1s;}
+}
+#box2 h1{
+    position: relative;
+    top:110px;
+    font-size: 50px;
+    color: rgb(235, 182, 9);
+    /* font-family: 'Pacifico'; */
+    animation: change 5s linear infinite;
+}
+/* ================================Box3================================== */
+#box3{
+    height: 800px;
+    width: 100%;
+    background-image: url(images/gallary-back-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-color: rgba(137, 43, 226, 0.774);
+}
+#box3 .black-box, #box2 .black-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+#box3 .box3-ch1{
+    position: relative;
+    top: 75px;
+    display: flex;
+    height: 700px;
+    width: 100%;
+    /* background-color: rgba(255, 140, 0, 0.747); */
+}
+.box3-ch1 .box3-ch1-ch1{
+    height: 700px;
+    /* background-color: rgba(17, 0, 255, 0.692); */
+    width: 60%;
+}
+.box3-ch1-ch1 .box3-ch1-ch1-ch1{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.container1{ 
+    position: relative;
+    top: 20px;
+    height: 280px;
+    width: 38%;
+    border-radius: 15%;
+}
+.container2{
+    height: 280px;
+    width: 40%;
+    border-radius: 15%;
+}
+.box3-ch1-ch1 .box3-ch1-ch1-ch2{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.box3-ch1 .box3-ch1-ch2{
+    height: 500px;
+    position: relative;
+    top:80px;
+    /* background-color: rgba(255, 0, 191, 0.692); */
+    width: 40%;
+}
+.container1 img, .container2 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15%;
+    transition: 1s;
+}
+.container1 img:hover, .container2 img:hover{
+    /* height: 105%;
+    width: 105%; */
+    transform: scale(1.1);
+}
+.box3-ch1-ch2 p{
+    font-size: 20px;
+    font-family: 'Shantell Sans';
+    color: #f2f2f2;
+}
+/* ================================Box4================================== */
+#box4{
+    height: 800px;
+    width: 100%;
+    background-image: url(north-food/kashmiri-gal-back.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-color: rgba(137, 43, 226, 0.774);
+}
+#box4 .head-text{
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    /* background-color: rgba(255, 127, 80, 0.781); */
+}
+.head-text h1{
+    position: relative;
+    top: 20px;
+    color:#f2f2f2;
+    font-family: 'Josefin Sans';
+}
+/* =======Box-4 child 1======= */
+.box4-ch1{
+    position: relative;
+    top: 50px;
+    height: 300px;
+    width: 100%;
+    /* background-color: darkred; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.box4-ch1 .box4-ch1-ch1{
+    height: 300px;
+    width: 40%;
+}
+.box4-ch1-ch1 h1{
+    position: relative;
+    top:50px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box4-ch1-ch1 h4{
+    position: relative;
+    top:70px;
+    line-height: 30px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box4-ch1 .box4-ch1-ch2{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgba(255, 255, 255, 0.582); */
+}
+.box4-ch1-ch2-img1{
+    height: 300px;
+    width: 45%;
+}
+.box4-ch1-ch2-img2{
+    height: 250px;
+    width: 45%;
+    position: relative;
+    top:50px;
+}
+#box4 img{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    transition: 1s;
+}
+#box4 img:hover{
+    transform: scale(1.05);
+}
+/* =======Box-4 child 2======= */
+.box4-ch2{
+    position: relative;
+    top: 100px;
+    height: 300px;
+    width: 100%;
+    /* background-color: rgb(137, 139, 0); */
+    display: flex;
+    justify-content: space-evenly;
+}
+.box4-ch2 .box4-ch2-ch1{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgba(255, 255, 255, 0.582); */
+}
+.box4-ch2-ch1-img1{
+    height: 300px;
+    width: 45%;
+}
+.box4-ch2-ch1-img2{
+    height: 250px;
+    width: 45%;
+    position: relative;
+    top:50px;
+}
+.box4-ch2 .box4-ch2-ch2{
+    height: 300px;
+    width: 40%;
+}
+.box4-ch2-ch2 h1{
+    position: relative;
+    top:50px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box4-ch2-ch2 h4{
+    position: relative;
+    top:70px;
+    line-height: 30px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+/* ================================Box5================================== */
+#box5{
+    height: 800px;
+    width: 100%;
+    background-image: url(north-food/kashmiri-gal-back.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-color: rgba(137, 43, 226, 0.774);
+}
+#box5 .head-text{
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    /* background-color: rgba(255, 127, 80, 0.781); */
+}
+.head-text h1{
+    position: relative;
+    top: 20px;
+    color:#f2f2f2;
+    font-family: 'Josefin Sans';
+}
+/* =======Box-4 child 1======= */
+.box5-ch1{
+    position: relative;
+    top: 50px;
+    height: 300px;
+    width: 100%;
+    /* background-color: darkred; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.box5-ch1 .box5-ch1-ch1{
+    height: 300px;
+    width: 40%;
+}
+.box5-ch1-ch1 h1{
+    position: relative;
+    top:50px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box5-ch1-ch1 h4{
+    position: relative;
+    top:70px;
+    line-height: 30px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box5-ch1 .box5-ch1-ch2{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgba(255, 255, 255, 0.582); */
+}
+.box5-ch1-ch2-img1{
+    height: 300px;
+    width: 45%;
+}
+.box5-ch1-ch2-img2{
+    height: 250px;
+    width: 45%;
+    position: relative;
+    top:50px;
+}
+#box5 img{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    transition: 1s;
+}
+#box5 img:hover{
+    transform: scale(1.05);
+}
+/* =======Box-4 child 2======= */
+.box5-ch2{
+    position: relative;
+    top: 100px;
+    height: 300px;
+    width: 100%;
+    /* background-color: rgb(137, 139, 0); */
+    display: flex;
+    justify-content: space-evenly;
+}
+.box5-ch2 .box5-ch2-ch1{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgba(255, 255, 255, 0.582); */
+}
+.box5-ch2-ch1-img1{
+    height: 300px;
+    width: 45%;
+}
+.box5-ch2-ch1-img2{
+    height: 250px;
+    width: 45%;
+    position: relative;
+    top:50px;
+}
+.box5-ch2 .box5-ch2-ch2{
+    height: 300px;
+    width: 40%;
+}
+.box5-ch2-ch2 h1{
+    position: relative;
+    top:50px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+.box5-ch2-ch2 h4{
+    position: relative;
+    top:70px;
+    line-height: 30px;
+    font-family: 'Trebuchet MS';
+    color: #f2f2f2;
+    text-align: center;
+}
+/* ================================Box6================================== */
+#box6{
+    width: 100%;
+    height: 375px;
+    /* background-color: rgba(255, 174, 0, 0.719); */
+}
+#box6 .box6-ch1{
+    position: relative;
+    height: 125px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgba(0, 128, 0, 0.719); */
+}
+.box6-ch1 .logo-foot{
+    position: relative;
+    left: 30px;
+    height: 125px;
+    width: 350px;
+    /* background-color: rgba(105, 90, 205, 0.767); */
+}
+.logo-foot img{
+    position: relative;
+    top: 25px;
+    left: 100px;
+    height: 80px;
+    width: 160px;
+}
+.box6-ch1 .foot-button{
+    position: relative;
+    height: 150px;
+    width: 350px;
+    /* background-color: rgba(105, 90, 205, 0.767); */
+}
+#box6 .box6-ch2{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* background-color: rgba(65, 105, 225, 0.808); */
+}
+.box6-ch2 .box6-bigbox1{
+    height: 250px;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.box6-ch2 .box6-ch2-box{
+    height: 250px;
+    width: 200px;
+    /* background-color: rgba(255, 0, 0, 0.664); */
+}
+.box6-ch2-box h3{
+    position: relative;
+    letter-spacing: 2px;
+    left:20px;
+    font-size: 15px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans';
+}
+.box6-ch2-box p{
+    position: relative;
+    left:20px;
+    color: #b9b6b6;
+    padding-top: 10px;
+    font-family: 'Josefin Sans';
+}
+.box6-ch2 .box6-bigbox2{
+    height: 250px;
+    width: 30%;
+    /* background-color: #acaf0c8a; */
+}
+.box6-bigbox2 .bigbox2-ch1{
+    position: relative;
+    left: 50px;
+    height: 50px;
+    width: 300px;
+    /* background-color: rgba(220, 20, 60, 0.74); */
+}
+.bigbox2-ch1 h3{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Josefin Sans';
+}
+.box6-bigbox2 .bigbox2-ch2{
+    display: flex;
+    justify-content: space-evenly;
+    left: 50px;
+    position: relative;
+    height: 150px;
+    width: 200px;
+    /* background-color: rgba(50, 20, 220, 0.74); */
+}
+.bigbox2-ch2 img{
+    position: relative;
+    top: 30px;
+    left: 50px;
+    height: 20px;
+    width: 20px;
+}
